@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="./styles.css" />
+        <title>FCC: Product Landing Page</title>
+    </head>
+    <body>
+        <header id="header">
+            <fieldset id='header-title'>
+                <img id='header-img' src='./logo.png' alt='logo' />
+            </fieldset>
+            <nav id="nav-bar">
+                <div>
+                    <a class="nav-link" href="#paintings">Painting</a>
+                    <a class="nav-link" href="#shipping">Shipping</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                </div>
+            </nav>
+        </header>
+        <section id='paintings'>
+            <h3>Learn how to paint with Bob Ross</h3>
+            <iframe width="560" height="315" 
+                id="video"
+                src="https://www.youtube.com/embed/pw5ETGiiBRg" 
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </section>
+        <section id='shipping'>
+            <h3>Want to see all the videos?</h3>
+            <h4>Bob Ross</h4>
+            <p>Robert Norman Ross (October 29, 1942 – July 4, 1995) was an American painter, art instructor, and television host. </p>
+            <p>He was the creator and host of The Joy of Painting, an instructional television program that aired from 1983 to 1994 on PBS in the United States, and also aired in Canada, Latin America, and Europe.</p> 
+            <p>Ross went from being a public television personality in the 1980s and 1990s to being an Internet celebrity in the 21st century, becoming popular with fans on YouTube, Twitch, and many other websites many years after his death.</p>
+            <h4>We can provide you all the videos ! just send us your email for more details !</h4>
+        </section>
+        <section id='contact'>
+            <h3>Contact us</h3>
+            <form action="https://www.freecodecamp.com/email-submit" method="get" id="form">
+                <fieldset>
+                    <label for="email" id="email-label">Want to learn more about us ?  </label>
+                    <input type="email" name="email" id="email" placeholder='Enter your email:' required>
+                </fieldset>
+                <input type="submit" id="submit" value="Contact us">
+            </form>
+        </section>
+    </body>
+</html>
