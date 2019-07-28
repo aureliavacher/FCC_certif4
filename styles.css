@@ -28,7 +28,7 @@ header{
     position: left;
     display: inline-block;
 }
-#nav-bar{
+#navbar{
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -54,7 +54,7 @@ header{
     header{
         text-align: center;
     }
-    #nav-bar{
+    #navbar{
         width: 80%;
     }
     .main-section{
