@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="./styles.css" />
+        <title>FCC: Technical Documentation Page</title>
+    </head>
+
+    <body>
+        <main id="main-doc">
+            <nav id="navbar">
+                <header>SASS Documentation</header>
+                
+                <a class="nav-link" href="#Overview">Overview</a>
+                <a class="nav-link" href="#The_Indented_Syntax">The Indented Syntax</a>
+                <a class="nav-link" href="#Variables">Variables</a>
+                <a class="nav-link" href="#Parsing_a_Stylesheet">Parsing a Stylesheet</a>
+                <a class="nav-link" href="#Default_Values">Default Values</a>
+                <a class="nav-link" href="#Scope">Scope</a>
+                <a class="nav-link" href="#Shadowing">Shadowing</a>
+            </nav>
+            <div id='doc'>
+                <section class='main-section' id='Overview'>
+                        <header>
+                            Overview
+                        </header>
+                        <code>The SCSS syntax uses the file extension .scss. With a few small exceptions, it’s a superset of CSS, which means essentially all valid CSS is valid SCSS as well. Because of its similarity to CSS, it’s the easiest syntax to get used to and the most popular.</code>
+                        <code>The SCSS syntax uses the file extension .scss. With a few small exceptions, it’s a superset of CSS, which means essentially all valid CSS is valid SCSS as well. Because of its similarity to CSS, it’s the easiest syntax to get used to and the most popular.</code>
+                        <code>The SCSS syntax uses the file extension .scss. With a few small exceptions, it’s a superset of CSS, which means essentially all valid CSS is valid SCSS as well. Because of its similarity to CSS, it’s the easiest syntax to get used to and the most popular.</code>
+                </section>
+                <section class='main-section' id='The_Indented_Syntax'>
+                    <header>
+                        The Indented Syntax
+                    </header>
+                    <code>The indented syntax was Sass’s original syntax, and so it uses the file extension .sass. Because of this extension, it’s sometimes just called “Sass”. The indented syntax supports all the same features as SCSS, but it uses indentation instead of curly braces and semicolons to describe the format of the document.</code>
+                    <code>In general, any time you’d write curly braces in CSS or SCSS, you can just indent one level deeper in the indented syntax. And any time a line ends, that counts as a semicolon. There are also a few additional differences in the indented syntax that are noted throughout the reference.</code>
+                </section>
+                <section class='main-section' id='Variables'>
+                    <header>
+                        Variables
+                    </header>
+                    <p>A variable declaration looks a lot like a property declaration: it’s written <variable>: <expression>. Unlike a property, which can only be declared in a style rule or at-rule, variables can be declared anywhere you want. To use a variable, just include it in a value.</p>
+                </section>
+                <section class='main-section' id='Parsing_a_Stylesheet'>
+                    <header>
+                        Parsing a Stylesheet
+                    </header>
+                    <ol>
+                        <li>If the sequence of bytes begins with the UTF-8 or UTF-16 encoding of U+FEFF BYTE ORDER MARK, the corresponding encoding is used.</li>
+                        <li>If the sequence of bytes begins with the plain ASCII string @charset, Sass determines the encoding using step 2 of the CSS algorithm for determining the fallback encoding.</li>
+                        <li>Otherwise, UTF-8 is used.</li>
+                        <li>If the sequence of bytes begins with the plain ASCII string @charset, Sass determines the encoding using step 2 of the CSS algorithm for determining the fallback encoding.</li>
+                        <li>Otherwise, UTF-8 is used.</li>
+                    </ol>
+                    <p>When Sass encounters invalid syntax in a stylesheet, parsing will fail and an error will be presented to the user with information about the location of the invalid syntax and the reason it was invalid.</p>
+                    <p>Note that this is different than CSS, which specifies how to recover from most errors rather than failing immediately. This is one of the few cases where SCSS isn’t strictly a superset of CSS. However, it’s much more useful to Sass users to see errors immediately, rather than having them passed through to the CSS output.</p>
+                    <p>The location of parse errors can be accessed through implementation-specific APIs. For example, in Dart Sass you can access SassException.span, and in Node Sass’s and Dart Sass’s JS API you can access the file, line, and column properties.</p>
+                </section>
+                <section class='main-section' id='Default_Values'>
+                    <header>
+                        Default Values
+                    </header>
+                    <p>Normally when you assign a value to a variable, if that variable already had a value, its old value is overwritten. But if you’re writing a Sass library, you might want to allow your users to customize your library’s variables before you use them to generate CSS.</p>
+                    <p>To make this possible, Sass provides the !default flag. This assigns a value to a variable only if that variable isn’t defined or its value is null. Otherwise, the existing value will be used. This way, users can set variables before they import your library to customize its behavior.</p>
+                    <p>Normally when you assign a value to a variable, if that variable already had a value, its old value is overwritten. But if you’re writing a Sass library, you might want to allow your users to customize your library’s variables before you use them to generate CSS.</p>
+                    <p>To make this possible, Sass provides the !default flag. This assigns a value to a variable only if that variable isn’t defined or its value is null. Otherwise, the existing value will be used. This way, users can set variables before they import your library to customize its behavior.</p>
+                </section>
+                <section class='main-section' id='Scope'>
+                    <header>
+                        Scope
+                    </header>
+                    <p>Variables declared at the top level of a stylesheet are global. This means that they can be accessed anywhere after they’ve been declared—even in another stylesheet! But that’s not true for all variables. Those declared in blocks (curly braces in SCSS or indented code in Sass) are usually local, and can only be accessed within the block they were declared.</p>
+                </section>
+                <section class='main-section' id='Shadowing'>
+                    <header>
+                        Shadowing
+                    </header>
+                    <p>Local variables can even be declared with the same name as a global variable. If this happens, there are actually two different variables with the same name: one local and one global. This helps ensure that an author writing a local variable doesn’t accidentally change the value of a global variable they aren’t even aware of.</p>
+                </section>
+            </div>
+            
+        </main>
+    </body>
+</html>
